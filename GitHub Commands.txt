@@ -1,0 +1,8 @@
+1. Make changes to the files in an editor
+2. Type git add . (adds the changes to the files)
+3. Type git commit -m "Commit message here" (commits the changes made locally)
+4. Type git push origin master (Pushes the changes to repository)
+
+Your repository
+https://github.com/hiteshram/hiteshram.github.io.git
+
