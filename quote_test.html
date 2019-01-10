@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+function loadQuote(){
+    fetch("http://quotes.rest/qod.json?category=inspire")
+    .then(res => res.json())
+    .then((out) => {
+    //var obj=JSON.parse(out);
+    var quote=out['contents']['quotes'][0]['quote'];
+    var author=out['contents']['quotes'][0]['author'];
+    document.getElementById('quote').innerText=quote;
+    document.getElementById('author').innerText=author;
+    }).catch(err => console.error(err));
+}
+</script>
+</head>
+<body onload="loadQuote();">
+    <div id="quote">
+        <h1></h1>
+    </div>
+    <div id="author">
+        <h2><i></i></h2>
+    </div>
+</body>
+</html>

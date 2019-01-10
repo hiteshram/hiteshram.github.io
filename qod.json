@@ -1,0 +1,34 @@
+{"success": {"total": 1},"contents": {"quotes": [{"quote": "Do not let what you cannot do interfere with what you can do.","author": "John Wooden"}],"copyright": "2017-19 theysaidso.com"}}
+
+var json = '{"success": {"total": 1},"contents": {"quotes": [{"quote": "Do not let what you cannot do interfere with what you can do.","author": "John Wooden"}],"copyright": "2017-19 theysaidso.com"}}';
+obj = JSON.parse(json);
+
+console.log(obj['contents']['quotes'][0]['quote']);
+// expected output: 42
+
+console.log(obj['contents']['quotes'][0]['author']);
+// expected output: true
+
+// console.log("Hello world");
+// var check="how are you";
+// console.log(check);
+// check=4;
+// console.log(check);
+
+// var value_var="initialised"
+// let value_let="initialised"
+// function check(){
+//     console.log(value_var);
+//     console.log(value_let);
+//     value_var="reassigned"
+//     value_let="reassigned"
+//     if(true){
+//         value_let="updated";
+//         console.log(value_let);
+//     }
+//     console.log(value_var);
+//     console.log(value_let);
+// }
+// check();
+// console.log(value_var);
+// console.log(value_let);

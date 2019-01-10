@@ -9,8 +9,21 @@
     <style>
         html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </style>
+    <script type="text/javascript">
+        function loadQuote(){
+            fetch("http://quotes.rest/qod.json?category=inspire")
+            .then(res => res.json())
+            .then((out) => {
+            //var obj=JSON.parse(out);
+            var quote=out['contents']['quotes'][0]['quote'];
+            var author=out['contents']['quotes'][0]['author'];
+            document.getElementById('qod').innerText=quote;
+            document.getElementById('author').innerText=author;
+            }).catch(err => console.error(err));
+        }
+    </script>
 </head>
-<body>
+<body onload="loadQuote();">
     <nav id="navigation">
         <a href="https://hiteshram.github.io" class="active">Home</a>
         <a href="#">Resume</a>
@@ -23,18 +36,60 @@
                     <figure></figure>
                 </section>
                 <section class="bio">
-                    <p>Personal Details</p>
+                    <h3>Hitesh Ram Kotha</h3>
+                    <p>Developer</p>
+                    <p>hiteshram.kotha@gmail.com</p>
+                    <p>+91 9491730170</p>
+                </section>
+                <section class="quote">
+                    <h1>Quote of the day</h1>
+                    <div id="qod"></div>
+                    <div id="author"></div>
                 </section>
         </section>
         <section class="right-pane">
                 <section class="techstack">
-                        <p>Technical Skills</p>
+                        <h1>Technical Skills</h1>
+                        <ul>
+                            <li>Programming Languages: C, Core Java, C#</li>
+                            <li>Designing Languages: HTML4, CSS3</li> 
+                            <li>Databases: MySQL, Oracle 11g</li>
+                            <li>Systems: Windows, GNU/Linux</li>
+                        </ul>
                 </section>
                 <section class="work">
-                        <p>Work experience</p>
+                        <h1>Work Experience</h1>
+                        <i><h1>Cognizant Technology Solutions (Sept 2016 – Sept 2018)</h1></i>
+                       <ul> 
+                           <li><b><p>API Development to Extract Telematics Data in C#</b>
+                                <br>Client vehicles which go to field work are often monitored with tracking devices provided by third party vendors, the API’s we develop fetches the Telematics data from the vendor systems and loads into respective client databases. 
+                                It validates the data received and reports via email if any discrepancy are found. 
+                                My job role is to Load the Operational Data and validate the data received.</p>
+                            </li>
+                            <li><b><p>Chatbot Development to automate CSR activities in C# using Microsoft LUIS API</b>
+                                <br>Developed a Chatbot prototype in C# to automate Customer Service Representatives tasks in Starting/Stopping a new or existing connection of utilities.</p>
+                            </li>
+                        </ul>    
                 </section>
                 <section class="education">
-                        <p>Education details</p>
+                        <h1>Education</h2>
+                            <ul>
+                                <li>
+                                    <b><p>K.L. University, Vaddeswaram, Guntur, India</b>
+                                    <br>Bachelor of Technology, June 2016
+                                    <br>Computer Science &amp; Engineering with an overall aggregate of 9.08 (CGPA).</p>
+                                </li>
+                                <li>
+                                    <b><p>Narayana Junior College, Vijayawada</b>
+                                    <br>Board of Intermediate Education, Andhra Pradesh, April 2012
+                                    <br>Computer Science &amp; Engineering with an overall aggregate of 9.08 (CGPA).</p>
+                                </li>
+                                <li>
+                                    <b><p>Narayana Junior College, Vijayawada</p></b>
+                                    <p>Board of Intermediate Education, Andhra Pradesh, April 2012</p>
+                                    <p>Computer Science &amp; Engineering with an overall aggregate of 9.08 (CGPA).</p>
+                                </li>
+                            </ul>
                 </section>
         </section>
     </main>
