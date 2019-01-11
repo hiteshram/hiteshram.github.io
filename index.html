@@ -17,8 +17,8 @@
             //var obj=JSON.parse(out);
             var quote=out['contents']['quotes'][0]['quote'];
             var author=out['contents']['quotes'][0]['author'];
-            document.getElementById('qod').innerText=quote;
-            document.getElementById('author').innerText=author;
+            document.getElementById('qod').innerText='"'+quote+'"';
+            document.getElementById('author').innerText='- '+author;
             }).catch(err => console.error(err));
         }
     </script>
@@ -43,8 +43,8 @@
                 </section>
                 <section class="quote">
                     <h1>Quote of the day</h1>
-                    <div id="qod"></div>
-                    <div id="author"></div>
+                    <div id="qod"></div><br>
+                    <div id="author" style="text-align: right;font-style: italic;"></div>
                 </section>
         </section>
         <section class="right-pane">
@@ -81,13 +81,11 @@
                                 </li>
                                 <li>
                                     <b><p>Narayana Junior College, Vijayawada</b>
-                                    <br>Board of Intermediate Education, Andhra Pradesh, April 2012
-                                    <br>Computer Science &amp; Engineering with an overall aggregate of 9.08 (CGPA).</p>
+                                    <br>Board of Intermediate Education, April 2012 with an overall aggregate of 93.3%.</p>
                                 </li>
                                 <li>
-                                    <b><p>Narayana Junior College, Vijayawada</p></b>
-                                    <p>Board of Intermediate Education, Andhra Pradesh, April 2012</p>
-                                    <p>Computer Science &amp; Engineering with an overall aggregate of 9.08 (CGPA).</p>
+                                    <b><p>Don Bosco High School, Guntupalli, Krishna District</b> 
+                                    <br>Secondary School Certification, May 2010 with an overall aggregate of 89.5%.</p>
                                 </li>
                             </ul>
                 </section>

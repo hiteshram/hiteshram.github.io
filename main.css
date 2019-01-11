@@ -35,7 +35,6 @@ main{
     display:flex;
     flex-direction:row;
     height:60%;
-    margin:5px;
     overflow:auto;
 }
 
@@ -44,6 +43,8 @@ main{
     flex-direction:column;
     width:40%;
     margin-right:0.75%;
+    margin-left:0.75%;
+    margin-top:0.75%;
 }
 
 .profile-picture figure{
@@ -53,49 +54,52 @@ main{
         background-image: url("hitesh_ram.jpg");
         width: 100%;
         height: 250px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .bio{
     background-color:whitesmoke;
-    padding-left:2%;
+    padding:2%;
     margin-bottom:0.75%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
 }
 
 .quote{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color:whitesmoke;
+    padding:2%;
+    margin-top:1%;
 }
+
 .right-pane{
     display:flex;
     flex-direction:column;
     width:60%;
+    margin-right:0.75%;
+    margin-top:0.75%;
 }
-
 .techstack
 {
     background-color:whitesmoke;
     flex-grow:1;
-    margin-bottom:5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding-left:2%;
+    padding:2%;
 }
 .work{
     background-color:whitesmoke;
     flex-grow:1;
-    margin-bottom:5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding-left:2%;
     text-align: justify;
-    padding-right:2%;
+    padding:2%;
+    margin-top:1%;
 }
 .education{
     background-color:whitesmoke;
     flex-grow:1;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding-left:2%;
-}
+    padding:2%;
+    margin-top:1%;
+} 
 
 footer{
     position:relative;
@@ -115,7 +119,49 @@ footer{
     }
     
     @media screen and (max-width: 479px) {
-    /* start of phone styles */
+        main{
+            display:flex;
+            flex-direction:column;
+            height:60%;
+            overflow:auto;
+        }
+        
+        .left-pane{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            margin-right:0.75%;
+            margin-left:0.75%;
+            margin-top:0.75%;
+        }
+
+        .right-pane{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            margin-right:0.75%;
+            margin-top:0.75%;
+        }
+        .bio{
+            margin-bottom:0.75%;
+        }
+        .quote{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+        .techstack{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+        .work{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+        .education{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+
     
     }
 
