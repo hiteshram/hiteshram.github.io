@@ -1,0 +1,241 @@
+/* start of desktop styles */
+
+body{
+    background-color: #EBEBEB;
+    margin:0;
+    margin-top:0;
+}
+nav{
+    position:relative;
+    background-color:#1D2C3D;
+    height:20%;
+    color:#EBEBEB;
+    margin:0 auto 0;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+nav a{
+    text-decoration: none;
+    color:#EBEBEB;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+nav a:hover{
+    color:#59C3C3;
+}
+
+nav p{
+    margin:0px;
+    height:20%;
+}
+
+main{
+    display:flex;
+    flex-direction:row;
+    height:60%;
+    overflow:auto;
+}
+
+.left-pane{
+    display:flex;
+    flex-direction:column;
+    width:25%;
+    margin-right:0.75%;
+    margin-left:0.75%;
+    margin-top:0.75%;
+}
+
+.profile-picture figure{
+        margin: 0px;
+        background-position: center;
+        background-size: cover;
+        background-image: url("hitesh_ram.jpg");
+        width: 100%;
+        height: 250px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.bio{
+    background-color:whitesmoke;
+    padding:2%;
+    margin-bottom:0.75%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.quote{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color:whitesmoke;
+    padding:2%;
+    margin-top:1%;
+}
+
+.right-pane{
+    display:flex;
+    flex-direction:column;
+    width:75%;
+    margin-right:0.75%;
+    margin-top:0.75%;
+}
+.techstack
+{
+    background-color:whitesmoke;
+    flex-grow:1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2%;
+}
+.work{
+    background-color:whitesmoke;
+    flex-grow:1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: justify;
+    padding:2%;
+    margin-top:1%;
+}
+.education{
+    background-color:whitesmoke;
+    flex-grow:1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2%;
+    margin-top:1%;
+} 
+
+footer{
+    position:relative;
+    background-color:#59C3C3;
+    height:20%;
+    color:#ebebeb;
+}
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    
+    }
+    
+    @media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    
+    }
+    
+    @media screen and (max-width: 479px) {
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        body{
+            background-color: #EBEBEB;
+            margin:0;
+            margin-top:0;
+        }
+        
+        .navbar {
+            background-color: #1D2C3D;
+            padding-bottom: 10px;
+        }
+        
+        .main-nav {
+            list-style-type: none;
+        }
+        
+        .nav-links, .logo {
+            text-decoration: none;
+            color:#EBEBEB ;
+        }
+        
+        .navbar a:hover{
+            color:#59C3C3;
+        }
+        
+        .main-nav li {
+            text-align: center;
+            margin:1.5% auto;
+        }
+        
+        .main-nav {
+            list-style-type: none;
+            display: none;
+        }
+        
+        .active {
+            display: block;
+          }
+          
+        .logo {
+            display: inline-block;
+            font-size: 22px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        .navbar-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer; 
+            color: #EBEBEB;
+            margin-left: 20px;
+        }
+        
+        #hamburger{
+            width: 20px;
+            height: 1px;
+            background-color: #EBEBEB;
+            margin: 6px 0;
+          }
+        
+        main{
+            display:flex;
+            flex-direction:column;
+            height:60%;
+            overflow:auto;
+        }
+        
+        .left-pane{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            margin-right:0.75%;
+            margin-left:0.75%;
+            margin-top:0.75%;
+        }
+
+        .right-pane{
+            display:flex;
+            flex-direction:column;
+            width:100%;
+            margin-right:0.75%;
+            margin-top:0.75%;
+        }
+        .bio{
+            margin-bottom:0.75%;
+        }
+        .quote{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+        .techstack{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+        .work{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+        .education{
+            margin-bottom:0.75%;
+            padding-right:5%;
+        }
+
+    
+    }
+
+
+/*
+Text colour on high-light in navigation #59C3C3 else white
+and footer as well
+C1CAD6
+*/
+

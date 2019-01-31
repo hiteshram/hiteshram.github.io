@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hitesh Ram Kotha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <style>
+        html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    </style>
+    <script type="text/javascript">
+        function loadQuote(){
+            fetch("https://quotes.rest/qod.json?category=inspire")
+            .then(res => res.json())
+            .then((out) => {
+            //var obj=JSON.parse(out);
+            var quote=out['contents']['quotes'][0]['quote'];
+            var author=out['contents']['quotes'][0]['author'];
+            document.getElementById('qod').innerText='"'+quote+'"';
+            document.getElementById('author').innerText='- '+author;
+            }).catch(err => console.error(err));
+        }
+    </script>
+    <script src="main.js"></script>
+</head>
+<body onload="loadQuote();">
+        <nav class="navbar">
+                <a href="#" class="logo">logo</a>
+                <span class="navbar-toggle" id="js-navbar-toggle">
+                    <div id="hamburger"></div>
+                    <div id="hamburger"></div>
+                    <div id="hamburger"></div>
+                </span>
+                <ul class="main-nav" id="js-menu">
+                    <li>
+                        <a href="#" class="nav-links">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-links">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-links">Affliations</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-links">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-links">Research</a>
+                    </li>
+                </ul>
+        </nav>
+
+    <main>
+        <section class="left-pane">
+                <section class="profile-picture">
+                    <figure></figure>
+                </section>
+                <section class="bio">
+                    <h3>Hitesh Ram Kotha</h3>
+                    <p>Developer</p>
+                    <p>hiteshram.kotha@gmail.com</p>
+                    <p>+91 9491730170</p>
+                </section>
+                <section class="quote">
+                    <h1>Quote of the day</h1>
+                    <div id="qod"></div><br>
+                    <div id="author" style="text-align: right;font-style: italic;"></div>
+                </section>
+        </section>
+        <section class="right-pane">
+                <section class="techstack">
+                        <h1>Technical Skills</h1>
+                        <ul>
+                            <li>Programming Languages: C, Core Java, C#</li>
+                            <li>Designing Languages: HTML4, CSS3</li> 
+                            <li>Databases: MySQL, Oracle 11g</li>
+                            <li>Systems: Windows, GNU/Linux</li>
+                        </ul>
+                </section>
+                <section class="work">
+                        <h1>Work Experience</h1>
+                        <i><h1>Cognizant Technology Solutions (Sept 2016 – Sept 2018)</h1></i>
+                       <ul> 
+                           <li><b><p>API Development to Extract Telematics Data in C#</b>
+                                <br>Client vehicles which go to field work are often monitored with tracking devices provided by third party vendors, the API’s we develop fetches the Telematics data from the vendor systems and loads into respective client databases. 
+                                It validates the data received and reports via email if any discrepancy are found. 
+                                My job role is to Load the Operational Data and validate the data received.</p>
+                            </li>
+                            <li><b><p>Chatbot Development to automate CSR activities in C# using Microsoft LUIS API</b>
+                                <br>Developed a Chatbot prototype in C# to automate Customer Service Representatives tasks in Starting/Stopping a new or existing connection of utilities.</p>
+                            </li>
+                        </ul>    
+                </section>
+                <section class="education">
+                        <h1>Education</h2>
+                            <ul>
+                                <li>
+                                    <b><p>K.L. University, Vaddeswaram, Guntur, India</b>
+                                    <br>Bachelor of Technology, June 2016
+                                    <br>Computer Science &amp; Engineering with an overall aggregate of 9.08 (CGPA).</p>
+                                </li>
+                                <li>
+                                    <b><p>Narayana Junior College, Vijayawada</b>
+                                    <br>Board of Intermediate Education, April 2012 with an overall aggregate of 93.3%.</p>
+                                </li>
+                                <li>
+                                    <b><p>Don Bosco High School, Guntupalli, Krishna District</b> 
+                                    <br>Secondary School Certification, May 2010 with an overall aggregate of 89.5%.</p>
+                                </li>
+                            </ul>
+                </section>
+        </section>
+    </main>
+    <footer>
+        <p><center>You have reached the abyss of my profile</center></p>
+    </footer>
+</body>

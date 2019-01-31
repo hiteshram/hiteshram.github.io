@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+            $(function(){
+                $(".hamburger").click(function(){
+                    $(".nav-bar-right").toggleClass("active");
+                });
+            });
+        </script>
     <style>
         html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </style>
@@ -24,74 +33,94 @@
     </script>
 </head>
 <body onload="loadQuote();">
-    <nav id="navigation">
-        <a href="https://hiteshram.github.io" class="active">Home</a>
-        <a href="#">Resume</a>
-        <a href="#">Memories</a>
-        <a href="mailto:hiteshram.kotha@gmail.com">Reach Out to Me</a>
-    </nav>
+    <div class="wrapper">
+        <div class="nav-bar">
+            <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-bar-left">
+                <a href="#">Hitesh Ram's</a>
+            </div>
+            <div class="nav-bar-right">
+                <ul>
+                    <li> <a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li> <a href="#"><i class="fas fa-id-card"></i> Resume</a></li>
+                    <li> <a href="#"><i class="fas fa-handshake"></i> Affliations</a></li>
+                    <li> <a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <main>
         <section class="left-pane">
                 <section class="profile-picture">
                     <figure></figure>
                 </section>
-                <section class="bio">
-                    <h3>Hitesh Ram Kotha</h3>
-                    <p>Developer</p>
-                    <p>hiteshram.kotha@gmail.com</p>
-                    <p>+91 9491730170</p>
+                <section class="bio"><p></p>
+                    <h3>Hitesh Ram Kotha</h3><br>
+                    <class="bio-info">
+                        <p><i class="fas fa-desktop"></i>&nbsp;&nbsp;Developer</p>
+                        <p><i class="far fa-envelope"></i>&nbsp;&nbsp;hiteshram.kotha@gmail.com</p>
+                        <p><i class="fas fa-tablet-alt"></i>&nbsp;&nbsp;+91 9491730170</p>
+                    </class>
                 </section>
                 <section class="quote">
-                    <h1>Quote of the day</h1>
-                    <div id="qod"></div><br>
+                        <h1><i class="fas fa-quote-left"></i>&nbsp;&nbsp;Quote of the Day&nbsp;&nbsp;<i class="fas fa-quote-right"></i></h1>
+                    <div id="qod"></div>
                     <div id="author" style="text-align: right;font-style: italic;"></div>
                 </section>
         </section>
         <section class="right-pane">
                 <section class="techstack">
-                        <h1>Technical Skills</h1>
-                        <ul>
-                            <li>Programming Languages: C, Core Java, C#</li>
-                            <li>Designing Languages: HTML4, CSS3</li> 
-                            <li>Databases: MySQL, Oracle 11g</li>
-                            <li>Systems: Windows, GNU/Linux</li>
-                        </ul>
+                        <h1><i class="fas fa-tools"></i> Technical Skills</h1>
+                        <table>
+                            <tr><td style="text-align:center;"><i class="fas fa-keyboard"></i></td><td>Programming</td><td>: C, Core Java, C#, R</td></tr>
+                            <tr><td style="text-align:center;"><i class="far fa-file-code"></i></td><td>Designing</td><td>: HTML5, CSS3</td></tr> 
+                            <tr><td style="text-align:center;"><i class="fas fa-database"></i></td><td>Databases</td><td>: MySQL, Oracle 11g</td></tr>
+                            <tr><td style="text-align:center;"><i class="fas fa-laptop"></i></td><td>Operating Systems</td><td>: Windows, GNU/Linux</td></tr>
+                        </table>    
                 </section>
                 <section class="work">
-                        <h1>Work Experience</h1>
-                        <i><h1>Cognizant Technology Solutions (Sept 2016 – Sept 2018)</h1></i>
-                       <ul> 
-                           <li><b><p>API Development to Extract Telematics Data in C#</b>
-                                <br>Client vehicles which go to field work are often monitored with tracking devices provided by third party vendors, the API’s we develop fetches the Telematics data from the vendor systems and loads into respective client databases. 
-                                It validates the data received and reports via email if any discrepancy are found. 
-                                My job role is to Load the Operational Data and validate the data received.</p>
-                            </li>
-                            <li><b><p>Chatbot Development to automate CSR activities in C# using Microsoft LUIS API</b>
-                                <br>Developed a Chatbot prototype in C# to automate Customer Service Representatives tasks in Starting/Stopping a new or existing connection of utilities.</p>
-                            </li>
-                        </ul>    
+                        <h1><i class="fas fa-business-time"></i> Work Experience</h1>
+                        <p>Cognizant Technology Solutions</p>
+                        <table>
+                            <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>Sept 2016 – Sept 2018</td></tr>
+                            <tr><td style="text-align:center;"><i class="fas fa-satellite-dish"></i></td><td>API Development to Extract Telematics Data in C#</td></tr>
+                            <tr><td style="text-align:center;"><i class="fas fa-robot"></i></td><td>Chatbot Development to automate CSR activities in C# using Microsoft LUIS API</td></tr>  
+                        </table>    
                 </section>
                 <section class="education">
-                        <h1>Education</h2>
-                            <ul>
-                                <li>
-                                    <b><p>K.L. University, Vaddeswaram, Guntur, India</b>
-                                    <br>Bachelor of Technology, June 2016
-                                    <br>Computer Science &amp; Engineering with an overall aggregate of 9.08 (CGPA).</p>
-                                </li>
-                                <li>
-                                    <b><p>Narayana Junior College, Vijayawada</b>
-                                    <br>Board of Intermediate Education, April 2012 with an overall aggregate of 93.3%.</p>
-                                </li>
-                                <li>
-                                    <b><p>Don Bosco High School, Guntupalli, Krishna District</b> 
-                                    <br>Secondary School Certification, May 2010 with an overall aggregate of 89.5%.</p>
-                                </li>
-                            </ul>
+                        <h1><i class="fas fa-graduation-cap"></i> Education</h1>
+                            <p>K. L. University</p>
+                            <table>
+                                <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>June 2012 – June 2016</td></tr>
+                                <tr><td style="text-align:center;"><i class="fas fa-university"></i></i></td><td>Bachelor of Technology in Computer Science</td></tr>
+                                <tr><td style="text-align:center;"><i class="fas fa-edit"></i></td><td>Overall aggregate of 9.08 (CGPA)</td></tr> 
+                            </table>                        
+                            <p>Narayana Junior College</p>
+                            <table>
+                                <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>June 2010 – April 2012</td></tr>
+                                <tr><td style="text-align:center;"><i class="fas fa-atom"></i></i></i></td><td>Board of Intermediate Education</td></tr>
+                                <tr><td style="text-align:center;"><i class="fas fa-edit"></i></td><td>Overall aggregate of 93.3%</td></tr> 
+                            </table>  
+                            <p>Don Bosco High School</p>
+                            <table>
+                                    <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>May 2010</td></tr>
+                                    <tr><td style="text-align:center;"><i class="fas fa-school"></i></i></i></td><td>Secondary School Certification</td></tr>
+                                    <tr><td style="text-align:center;"><i class="fas fa-edit"></i></td><td>Overall aggregate of 89.5%</td></tr> 
+                            </table> 
                 </section>
         </section>
     </main>
     <footer>
-        <p><center>You have reached the abyss of my profile</center></p>
+        <center>
+        <p>Reach out to me</p>
+        <p><a href="https://www.facebook.com/hiteshram.kotha" target="_blank"><i class="fab fa-facebook"></i></a>
+           <a href="https://twitter.com/hiteshramk" target="_blank"><i class="fab fa-twitter-square"></i></a>
+           <a href="https://www.linkedin.com/in/hitesh-ram-kotha-9090947a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+           <a href="https://api.whatsapp.com/send?phone=917550090095" target="_blank"><i class="fab fa-whatsapp-square"></i></a>
+           <a href="https://plus.google.com/u/0/104418944086152872796" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+        </p>
+        </center>
     </footer>
 </body>
