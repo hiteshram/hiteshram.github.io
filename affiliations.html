@@ -18,21 +18,8 @@
     <style>
         html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </style>
-    <script type="text/javascript">
-        function loadQuote(){
-            fetch("https://quotes.rest/qod.json?category=inspire")
-            .then(res => res.json())
-            .then((out) => {
-            //var obj=JSON.parse(out);
-            var quote=out['contents']['quotes'][0]['quote'];
-            var author=out['contents']['quotes'][0]['author'];
-            document.getElementById('qod').innerText='"'+quote+'"';
-            document.getElementById('author').innerText='- '+author;
-            }).catch(err => console.error(err));
-        }
-    </script>
 </head>
-<body onload="loadQuote();">
+<body>
     <div class="wrapper">
         <div class="nav-bar">
             <div class="hamburger">
@@ -43,74 +30,108 @@
             </div>
             <div class="nav-bar-right">
                 <ul>
-                    <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li> <a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li> <a href="Hitesh-Ram-Kotha-Resume-24-Jan.pdf" target="_blank"><i class="fas fa-id-card"></i> Resume</a></li>
                     <li> <a href="affiliations.html" class="active"><i class="fas fa-handshake"></i> Affliations</a></li>
-                    <li> <a href="#"><i class="fas fa-code-branch"></i> Projects</a></li>
+                    <li> <a href="https://github.com/hiteshram" target="_blank"><i class="fas fa-code-branch"></i> Projects</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <main>
-        <section class="left-pane">
-                <section class="profile-picture">
-                    <figure></figure>
+    <main class="affiliation-main">       
+        <section class="affiliation-pane">
+                <section class="affiliation">
+                    <div class="affiliation-picture">
+                        <figure style=" background-image: url('csi_award.jpg');"></figure>
+                    </div>
+                    <div class="affiliation-heading"><p></p>
+                        <h3>First Prize at IV Annual Reginal Project Contest 2015</h3>
+                        <div class="affiliation-info">
+                            <p>Won First Prize at IV Annual Project Contest Region – V (Andhra Pradesh, Karnataka & Telangana) conducted by Computer Society of India for KLUster (KLU Student's Tools and Educational Repository) Linux Distribution.</p>
+                        </div>
+                    </div>
                 </section>
-                <section class="bio"><p></p>
-                    <h3>Hitesh Ram Kotha</h3><br>
-                    <class="bio-info">
-                        <p><i class="fas fa-desktop"></i>&nbsp;&nbsp;Developer</p>
-                        <p><i class="far fa-envelope"></i>&nbsp;&nbsp;hiteshram.kotha@gmail.com</p>
-                        <p><i class="fas fa-tablet-alt"></i>&nbsp;&nbsp;+91 9491730170</p>
-                    </class>
+                <section class="affiliation">
+                    <div class="affiliation-picture">
+                        <figure style=" background-image: url('gold_medal.jpg');"></figure>
+                    </div>
+                    <div class="affiliation-heading"><p></p>
+                        <h3>Best Outgoing Student, Computer Sciene & Engineering (2012-2016)</h3>
+                        <div class="affiliation-info">
+                            <p>Recieved Best Outgoing Student award from Vice Chancellor Dr. L.S.S. Reddy for Batch 2012-2016 of Computer Science & Engineering Department.</p>
+                        </div>
+                    </div>
                 </section>
-                <section class="quote">
-                        <h1><i class="fas fa-quote-left"></i>&nbsp;&nbsp;Quote of the Day&nbsp;&nbsp;<i class="fas fa-quote-right"></i></h1>
-                    <div id="qod"></div>
-                    <div id="author" style="text-align: right;font-style: italic;"></div>
+                <section class="affiliation">    
+                    <div class="affiliation-picture">
+                            <figure style=" background-image: url('IMG_0622.jpg');"></figure>
+                    </div>
+                    <div class="affiliation-heading"><p></p>
+                        <h3>Value Coin for Passion 2017</h3>
+                        <div class="affiliation-info">
+                            <p>Received Value Coin for passion from Clients at Cognizant Technology Solutions for prototype development of a ChatBot which perfroms rudimentary tasks of CSRs.</p>
+                        </div>
+                    </div>
                 </section>
-        </section>
-        <section class="right-pane">
-                <section class="techstack">
-                        <h1><i class="fas fa-tools"></i> Technical Skills</h1>
-                        <table>
-                            <tr><td style="text-align:center;"><i class="fas fa-keyboard"></i></td><td>Programming</td><td>: C, Core Java, C#, R</td></tr>
-                            <tr><td style="text-align:center;"><i class="far fa-file-code"></i></td><td>Designing</td><td>: HTML5, CSS3</td></tr> 
-                            <tr><td style="text-align:center;"><i class="fas fa-database"></i></td><td>Databases</td><td>: MySQL, Oracle 11g</td></tr>
-                            <tr><td style="text-align:center;"><i class="fas fa-laptop"></i></td><td>Operating Systems</td><td>: Windows, GNU/Linux</td></tr>
-                        </table>   
-                </section>
-                <section class="work">
-                        <h1><i class="fas fa-business-time"></i> Work Experience</h1>
-                        <p>Cognizant Technology Solutions</p>
-                        <table>
-                            <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>Sept 2016 – Sept 2018</td></tr>
-                            <tr><td style="text-align:center;"><i class="fas fa-satellite-dish"></i></td><td>API Development to Extract Telematics Data in C#</td></tr>
-                            <tr><td style="text-align:center;"><i class="fas fa-robot"></i></td><td>Chatbot Development to automate CSR activities in C# using Microsoft LUIS API</td></tr>  
-                        </table>    
-                </section>
-                <section class="education">
-                        <h1><i class="fas fa-graduation-cap"></i> Education</h1>
-                            <p>K. L. University</p>
+            </section>
+            <section class="organization-pane">
+                <section class="organization">    
+                    <div class="organization-picture">
+                        <figure style=" background-image: url('sealogo.png');"></figure>
+                    </div>
+                    <div class="organization-heading"><p></p>
+                        <h3>Software Engineering Associates Club - CSE, K.L.University</h3>
+                        <div class="organization-info">
                             <table>
-                                <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>June 2012 – June 2016</td></tr>
-                                <tr><td style="text-align:center;"><i class="fas fa-university"></i></i></td><td>Bachelor of Technology in Computer Science</td></tr>
-                                <tr><td style="text-align:center;"><i class="fas fa-edit"></i></td><td>Overall aggregate of 9.08 (CGPA)</td></tr> 
-                            </table>                        
-                            <p>Narayana Junior College</p>
-                            <table>
-                                <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>June 2010 – April 2012</td></tr>
-                                <tr><td style="text-align:center;"><i class="fas fa-atom"></i></i></i></td><td>Board of Intermediate Education</td></tr>
-                                <tr><td style="text-align:center;"><i class="fas fa-edit"></i></td><td>Overall aggregate of 93.3%</td></tr> 
-                            </table>  
-                            <p>Don Bosco High School</p>
-                            <table>
-                                    <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>May 2010</td></tr>
-                                    <tr><td style="text-align:center;"><i class="fas fa-school"></i></i></i></td><td>Secondary School Certification</td></tr>
-                                    <tr><td style="text-align:center;"><i class="fas fa-edit"></i></td><td>Overall aggregate of 89.5%</td></tr> 
-                            </table> 
+                                <tr><td><i class="fas fa-briefcase"></i></td><td>Application Wing Coordinator</td></tr>
+                                <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>2014 – 2015</td></tr>
+                            </table>
+                        <p>
+                                SEA Club is an association that is committed towards the development of new strategies in software engineering. The club's chief objective is to build a firm bridge among the regular academics, Research & Development towards the Industrial arena.
+                        </p>
+                        </div>
+                    </div>
                 </section>
-        </section>
+
+                <section class="organization">    
+                        <div class="organization-picture">
+                            <figure style=" background-image: url('kluglogo.png');"></figure>
+                        </div>
+                        <div class="organization-heading"><p></p>
+                            <h3>KLU GNU/Linux Users' Group</h3>
+                            <div class="organization-info">
+                                <table>
+                                    <tr><td><i class="fas fa-briefcase"></i></td><td>Member/KLUster OS Developer</td></tr>
+                                    <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>2015 – 2016</td></tr>
+                                </table>
+                                  <p>
+                                    KLUG is a community which aims to provide awareness in
+                                    the domian of Free and Open Source Technologies. KLUG, established in November 2011
+                                    is now sucessfully acheiving its objectives to establish FOSS as a platform for learning.
+                                    We run with a motto “Technology for the Society”. 
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="organization">    
+                            <div class="organization-picture">
+                                <figure style=" background-image: url('aiesec.jpg');"></figure>
+                            </div>
+                            <div class="organization-heading"><p></p>
+                                <h3>AIESEC in Vijayawada</h3>
+                                <div class="organization-info">
+                                    <table>
+                                        <tr><td><i class="fas fa-briefcase"></i></td><td>General Manager - Income Exchange Team</td></tr>
+                                        <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>2013 – 2015</td></tr>
+                                    </table>
+                                    <p>
+                                        AIESEC provides young people with leadership and cross-culture development, global internships, and volunteer exchange experiences across the globe.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+            </section>
     </main>
     <footer>
         <center>
