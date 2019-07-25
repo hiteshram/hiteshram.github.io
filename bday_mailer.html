@@ -8,31 +8,16 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script>
-            $(function(){
-                $(".hamburger").click(function(){
-                    $(".nav-bar-right").toggleClass("active");
-                });
-            });
-        </script>
+    
     <style>
         html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </style>
     <script type="text/javascript">
-        function loadQuote(){
-            fetch("https://quotes.rest/qod.json?category=inspire")
-            .then(res => res.json())
-            .then((out) => {
-            //var obj=JSON.parse(out);
-            var quote=out['contents']['quotes'][0]['quote'];
-            var author=out['contents']['quotes'][0]['author'];
-            document.getElementById('qod').innerText='"'+quote+'"';
-            document.getElementById('author').innerText='- '+author;
-            }).catch(err => console.error(err));
+        function helloworld(){
+            console.log(1+1);
         }
     </script>
 </head>
-    <body>
-      Hello world
-    </body>
-</html>
+<body onload="helloworld()">
+    Hello world
+</body>
