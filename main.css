@@ -234,6 +234,59 @@ main{
 #author{
     margin-right:10%;
 }
+
+.fact{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color:whitesmoke;
+    margin-top:2%; 
+    border-radius: 15px;
+    margin-bottom:3%;
+    padding-bottom:2%;
+    display:flex;
+    flex-direction:column;
+}
+
+.fact h1{
+    text-align: center;
+    color:#59C3C3;
+    background-color:#1D2C3D;
+    margin-top: 0;
+    padding-top: 5%;
+    padding-bottom:5%;
+	box-sizing: border-box;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    /*box-shadow: 0 -5px 5px -5px rgba(0,0,0,0.2); top*/
+    /*box-shadow: 5px 0 5px -5px rgba(0,0,0,0.2); /*right*/
+    /*box-shadow: -5px 0 5px -5px rgba(0,0,0,0.2); /*left */
+}
+
+#fod{
+    text-align:justify;
+    margin:2%;
+}
+
+#ftitle{
+    text-align: center;
+    font-weight: bold;
+}
+
+#furl figure{
+    margin: 0px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("hitesh_ram.jpg");
+    width: 100%;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
 .right-pane{
     display:flex;
     flex-direction:column;
@@ -432,6 +485,26 @@ footer a:hover i{
             box-sizing: border-box;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
+        }
+
+        .fact{
+            margin-bottom:1%;
+            /* padding-right:5%; */
+        }
+        .fact h1{
+            text-align: center;
+            color:#59C3C3;
+            background-color:#1D2C3D;
+            margin-top: 0;
+            padding-top: 3%;
+            padding-bottom:3%;
+            box-sizing: border-box;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        #fod{
+            text-align:justify;
         }
 
         .affiliation-main{

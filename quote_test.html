@@ -12,9 +12,22 @@ function loadQuote(){
     document.getElementById('author').innerText=author;
     }).catch(err => console.error(err));
 }
+
+function loadFact(){
+    fetch("https://api.nasa.gov/planetary/apod?api_key=fLeq9rwiAeiD4070Oafb19zzLgtqpWZehRuHlnd2")
+    .then(res=>res.json())
+    .then((out)=>{
+        var fact_title=out['title'];
+        var fact_url=out['url'];
+        var fact_explanation=out['explanation'];
+        console.log(fact_title);
+        console.log(fact_url);
+        console.log(fact_explanation);
+    }).catch(err=>console.err(error));
+}
 </script>
 </head>
-<body onload="loadQuote();">
+<body onload="loadQuote();loadFact();">
     <div id="quote">
         <h1></h1>
     </div>

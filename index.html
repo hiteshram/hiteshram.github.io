@@ -30,9 +30,21 @@
             document.getElementById('author').innerText='- '+author;
             }).catch(err => console.error(err));
         }
+        function loadFact(){
+            fetch("https://api.nasa.gov/planetary/apod?api_key=fLeq9rwiAeiD4070Oafb19zzLgtqpWZehRuHlnd2")
+            .then(res=>res.json())
+            .then((out)=>{
+                var fact_title=out['title'];
+                var fact_url=out['url'];
+                var fact_explanation=out['explanation'];
+                //document.getElementById('fod').innerText=fact_explanation;
+                document.getElementById('furl').innerHTML="<figure style='background-image:url("+fact_url+");'></figure>";
+                document.getElementById('ftitle').innerText=fact_title;
+            }).catch(err=>console.err(error));
+        }
     </script>
 </head>
-<body onload="loadQuote();">
+<body onload="loadQuote();loadFact();">
     <div class="wrapper">
         <div class="nav-bar">
             <div class="hamburger">
@@ -65,9 +77,18 @@
                     </class>
                 </section>
                 <section class="quote">
-                        <h1><i class="fas fa-quote-left"></i>&nbsp;&nbsp;Quote of the Day&nbsp;&nbsp;<i class="fas fa-quote-right"></i></h1>
+                    <h1><i class="fas fa-quote-left"></i>&nbsp;&nbsp;Quote of the Day&nbsp;&nbsp;<i class="fas fa-quote-right"></i></h1>
                     <div id="qod"></div>
                     <div id="author" style="text-align: right;font-style: italic;"></div>
+                </section>
+
+                <section class="fact">
+                    <h1><i class="fas fa-rocket"></i>&nbsp;&nbsp;Picture Of the Day&nbsp;&nbsp;<i class="fas fa-rocket" style="transform:rotate(270deg);"></i></h1>
+                    <br>
+                    <div id="furl"><figure></figure></div>
+                    <br>
+                    <div id="ftitle" style="text-align: center;font-style: bold;"></div>
+                    <div id="fod" style="text-align: justified;"></div>
                 </section>
         </section>
         <section class="right-pane">
@@ -85,7 +106,8 @@
                         <p>Cognizant Technology Solutions</p>
                         <table>
                             <tr><td style="text-align:center;"><i class="fas fa-calendar-alt"></i></td><td>Sept 2016 – Sept 2018</td></tr>
-                            <tr><td style="text-align:center;"><i class="fas fa-satellite-dish"></i></td><td>API Development to Extract Telematics Data in C#</td></tr>
+                            <tr><td style="text-align:center;"><i class="fas fa-satellite-dish"></i></td><td>Extract/Validate Telematics Data into Client's System using C#</td></tr>
+                            <tr><td style="text-align:center;"><i class="fab fa-windows"></i></td><td>Client's Intranet Site Development and Maintenance on Sharepoint 2016</td></tr>
                             <tr><td style="text-align:center;"><i class="fas fa-robot"></i></td><td>Chatbot Development to automate CSR activities in C# using Microsoft LUIS API</td></tr>  
                         </table>
                         <p>Broadridge Financial Solutions</p>
