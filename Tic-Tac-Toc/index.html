@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic-Tac-Toe</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Welcome to Tic-Tac-Toe</h1>
+        <p>Player 1 (X) : <input type="text" id="player1" ></p>
+        <p>Player 2 (O) : <input type="text" id="player2" ></p>
+        <p>
+          <button type="submit" onclick="getNames()" id="get_names" name="button" class="btn btn-primary">Submit Names</button>
+          &nbsp;&nbsp;
+          <button id="b" type="button" class="btn btn-success">Play Again</button>
+        </p>
+        <p id="won"></p>
+      </div>
+
+      <table align="center">
+        <tr>
+          <td id="one"></td><td id="two"></td><td id="three"></td>
+        </tr>
+        <tr>
+          <td id="four"></td><td id="five"></td><td id="six"></td>
+        </tr>
+        <tr>
+          <td id="seven"></td><td id="eight"></td><td id="nine"></td>
+        </tr>
+      </table>
+      <br><br><br>
+      </div>
+      <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">
+          Look Maa! I created a JavaScript Web App
+        </div>
+      </footer>
+
+    <script src="myScript.js"></script>
+  </body>
+</html>
